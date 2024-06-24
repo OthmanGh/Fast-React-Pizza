@@ -1,11 +1,4 @@
-// .prettierrc.js
-async function getConfig() {
-  const tailwindPlugin = await import('prettier-plugin-tailwindcss');
-
-  return {
-    plugins: [tailwindPlugin],
-    singleQuote: true,
-  };
-}
-
-module.exports = getConfig().then((config) => config);
+module.exports = {
+  plugins: [require('prettier-plugin-tailwindcss')],
+  singleQuote: true,
+};
